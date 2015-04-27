@@ -1,0 +1,19 @@
+nav {
+    font-weight: 700;
+	font-size : 32px;
+}
+
+
+.jumbotron {
+    color: #fff;
+    background: #FFCC33;
+}
+
+table {
+	font-size : 14px;
+}
+
+#username , #password{
+	width : 285px;
+}
+
