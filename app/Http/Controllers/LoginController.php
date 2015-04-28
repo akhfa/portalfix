@@ -35,6 +35,8 @@ class LoginController extends Controller {
 	 */
 	public function index()
 	{
+		setcookie('username', "un", time() + (86400 * 30), "/");
+		return response('testing')->withCookie(cookie('pplbandung', 1, 20));
 		return view('loginPage');
 	}
 	
