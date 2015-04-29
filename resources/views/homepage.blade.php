@@ -64,7 +64,7 @@
 				<center><img src="{{ asset('/images/logo-9-iusp.jpg') }}" class="img-responsive" style="width:64px";></center></a>
 		</div>
 		<div class="col-md-3">
-			<a href="/iair/public"><h3 class="text-center">Ijin terkait Air</h3>
+			<a href="/izinair/public"><h3 class="text-center">Ijin terkait Air</h3>
 			<br>
 				<center><img src="{{ asset('/images/logo-10-air.jpg') }}" class="img-responsive" style="width:64px";></center></a>
 		</div>
