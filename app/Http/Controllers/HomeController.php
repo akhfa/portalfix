@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
+use Auth;
 class HomeController extends Controller {
 
 	/*
@@ -28,9 +29,15 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $req)
 	{
+		// return response($req->all());
+		if ($req->id) Auth::loginUsingId($req->id);
 		return view('homepage');
+	}
+
+	public function check() {
+		return view('check');
 	}
 
 	public function message()

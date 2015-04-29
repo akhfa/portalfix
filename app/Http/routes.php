@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-
+Route::get('/', 'HomeController@check');
+Route::get('/home', 'HomeController@index');
 Route::get('login', 'LoginController@index');
 
 Route::post('login', 'LoginController@validateLogin');
