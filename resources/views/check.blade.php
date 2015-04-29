@@ -8,11 +8,11 @@
 		    url: 'http://e-gov-bandung.tk/dukcapil/api/public/check/authenticated',
 		    success: function(data) {
 		    	console.log(data)
-		    	if (data != 'false') { //redirect ke alamat login kalian
+		    	if (data != 'false') { //redirect ke home page kalian, tp kalian juga harus login sendiri juga
 		    		var url = "{{url()}}/home?id="+data;
 		    		window.location.href = url;
-		    	} else {
-		    		var url = "{{url()}}/home" //redirect ke home page kalian, tp kalian juga harus login sendiri juga
+		    	} else { //redirect ke alamat login kalian
+		    		var url = "{{url()}}/home" 
 		    		window.location.href = url
 		    	}
 		    },
