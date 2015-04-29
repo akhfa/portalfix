@@ -46,11 +46,11 @@ class LoginController extends Controller {
 	*/
 	public function validateLogin(Request $request)
 	{
+		// return $request->all();
 		$r = $request->all();	
-		// return response('sad');
 		if (Auth::attempt(['nik' => $r['nik'], 'password' => $r['password']])) {
 			// return Auth::user();
-			return redirect('/');
+			return redirect('/home');
 		}
 		return redirect('/login');
 		// return 'false';
@@ -129,6 +129,6 @@ class LoginController extends Controller {
 	 //    unset($_COOKIE['password']);
 	 //    setcookie('username', null, -1, '/');
 	 //    setcookie('password', null, -1, '/');
-		return redirect('/');
+		return redirect('/home');
 	}
 }
