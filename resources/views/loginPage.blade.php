@@ -9,10 +9,10 @@
 	<link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 	<div class="container">
 		<div class="login-form">
-			<form id="loginForm" onsubmit="#" action="/login" method="POST">
+			<form id="loginForm" onsubmit="#" action="{{url('login')}}" method="POST">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<li>
-					<input id="username" class="formlogin" name="username" type="text" class="text" placeholder="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}"> </input>
+					<input class="formlogin" name="nik" type="text" class="text" placeholder="NIK" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'nik';}"> </input>
 				</li>
 				<li>
 					<input id="password" name="password" type="password" placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"> </input>

@@ -42,23 +42,12 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="menu nav navbar-nav navbar-right">
-			      <?php	
-			      		if(isset($_COOKIE['username']) && isset($_COOKIE['password']))
-			      		{
-			      			echo "<h3>".$_COOKIE['username'];
- 			   				echo '<li id="logoutLink"> <a href="/logout")>Logout</a></li>';
- 			   			}
- 			   			else
- 			   			{
- 			   				// echo '<li id="logoutLink"> <a href="{{ url("/auth/logout") }}">Logout</a></li>';
- 			   				echo 	'<li id="homepageLink"> <a href="/">Home</a></li>';
-			        		echo	'<li id="loginLink"> <a href="./login">Login</a></li>';
- 			   			}
-			      ?>
 			      	@if (Auth::guest())
-			        	
+			      		<li id="homepageLink"> <a href="/">Home</a></li>
+			      		<li id="loginLink"> <a href="{{url('login')}}">Login</a></li>
 			        @else
-			        	
+			        	<h3>{{Auth::user()->nama}}</h3>
+			        	<li id="logoutLink"> <a href="{{url('logout')}}")>Logout</a></li>
 			        @endif
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
