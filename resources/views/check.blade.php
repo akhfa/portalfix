@@ -5,10 +5,8 @@
 
 	$.ajax({
 		    type: 'get',
-		    url: 'http://dukcapil-api.e-gov-bandung.tk/check/authenticated',
+		    url: 'http://e-gov-bandung.tk/dukcapil/api/public/auth/check',
 		    success: function(data) {
-		    		console.log("ASDF")
-		    		// console.log({{url()}});
 		    	if (data != 'false') {
 		    		var url = "{{url()}}/home?id="+data;
 		    		window.location.href = url;
