@@ -31,8 +31,14 @@ class HomeController extends Controller {
 	 */
 	public function index(Request $req)
 	{
-		// return response($req->all());
-		if ($req->id) Auth::loginUsingId($req->id);
+		// return Auth::user();
+		// return response($req->id != null ? 'true' : 'false');
+		if (Auth::check()) {
+			Auth::loginUsingId(Auth::user()->id);
+		}
+		if ($req->id != null) {
+			Auth::loginUsingId($req->id);
+		}
 		return view('homepage');
 	}
 

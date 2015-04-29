@@ -5,7 +5,7 @@
 
 	$.ajax({
 		    type: 'get',
-		    url: 'http://e-gov-bandung.tk/dukcapil/api/public/check/authenticated',
+		    url: 'http://localhost:8080/gina/api/public/check/authenticated',
 		    success: function(data) {
 		    	console.log(data)
 		    	if (data != 'false') {

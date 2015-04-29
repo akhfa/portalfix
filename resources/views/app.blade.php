@@ -48,6 +48,20 @@
 			        @else
 			        	<h3>{{Auth::user()->nama}}</h3>
 			        	<li id="logoutLink"> <a href="{{url('logout')}}")>Logout</a></li>
+						<script type="text/javascript">
+							$('#logoutLink').click(function(e) {
+								$.ajax({
+									type: 'get',
+									url: 'http://e-gov-bandung.tk/dukcapil/api/public/auth/logout',
+									success: function(data) {
+
+									},
+									error: function(data) {
+										// alert(data);
+									}
+								});
+							})
+						</script>
 			        @endif
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
