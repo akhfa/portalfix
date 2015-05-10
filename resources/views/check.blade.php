@@ -17,7 +17,8 @@
 		    	}
 		    },
 		    error: function(data) {
-		    	alert(data);
+		    	console.log(data)
+		    	alert('error. cors mungkin?');
 		    }
 		});
 </script>
